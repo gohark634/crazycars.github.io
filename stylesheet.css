@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color--: #04AA6D;
+    --secondary-color--: black;
+    --third-color--: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+li a {
+    padding: 8px 16px;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: var(--secondary-color--);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    background-color: #f1f1f1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #000;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    color: var(--third-color--);
+}
+
+.active {
+    background-color: var(--primary-color--);
+    color: var(--third-color--);
+}
+
+.button {
+    padding: 10px 15px;
+    background: red;
+    border: 0px;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    color: var(--third-color--);
+    background: var(--secondary-color--);
+}
+
+.logo {
+    color: var(--third-color--);
+    font-size: 35px;
+    padding: 0 30px;
+}
+.slider{
+    width: 100%;
+    height: 500px;
+    background-color: goldenrod;
+    position: relative;
+    margin-bottom: 50px;
+}
+.bi-chevron-compact-left,.bi-chevron-compact-right{
+    width: 80px;
+    height: 100px;
+    background-color: rgba(208, 206, 210,0.5);
+    cursor: pointer;
+}
+.bi-chevron-compact-left{
+    margin-left: -20px;
+    border-top-right-radius:10px ;
+    border-bottom-right-radius:10px ;
+}
+.bi-chevron-compact-left:hover,
+.bi-chevron-compact-right:hover{
+    color: red;
+    transition: all 0.3s;
+}
+.bi-chevron-compact-right{
+    margin-right: -20px;
+    border-top-left-radius:10px ;
+    border-bottom-left-radius:10px ;
+}
+.left-arrow{
+    position: absolute;
+    top: 200px;
+    left: 0;
+}
+.right-arrow{
+    position: absolute;
+    top: 200px;
+    right: 0;
+}
+.container {
+    width: 90%;
+    padding: 25px 0;
+    background: rgba(0,0,0,0.5);
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+} 
+/* .container :last-child { flex: 1 0 350px ;} */
+
+.items {
+    width: 300px;
+    margin: 25px;
+}
+
+.items:hover {
+    box-shadow: 3px 3px 5px 0.1px var(--secondary-color--);
+}
+
+.box {
+    position: relative;
+    overflow: hidden;
+}
+
+.img {
+    width: 100%;
+    height: 250px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+/* .img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+} */
+
+.img1 {
+    background-image: url(/CrazyCars/images/city-400_300-1.webp);
+}
+
+.status,
+.pkr {
+    display: inline-block;
+    padding: 5px 10px;
+    background: var(--secondary-color--);
+    color: var(--third-color--);
+    margin: 1px;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.status {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pkr {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.name {
+    font-size: 25px;
+    padding: 15px 10px;
+    background: var(--third-color--);
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.name a {
+    display: inline-block;
+    color: var(--secondary-color--);
+}
+
+.name a:hover {
+    color: var(--primary-color--);
+    transition: all 0.3s;
+}
+.bi-list{
+    color: white;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    display: none;
+    cursor: pointer;
+}
+#list,#yo{
+    display: none;
+}
+@media (max-width: 800px) {
+    nav {
+        position: relative;
+        justify-content: left;
+    }
+    .slider{
+        margin-top: 500px;
+        display: block;
+    }
+    nav ul {
+        background: none;
+        width: 250px;
+        flex-direction: column;
+        padding: 0;
+        align-items: baseline;
+        margin-right: 50px;
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+    nav ul li {
+        width: 100%;
+        margin: 0;
+    }
+    nav ul li a {
+        border-radius: 0px;
+    }
+    .button {
+        margin: 16px;
+    }
+    .bi-list{
+        display: block;
+    }
+    #yo{
+        display: block;
+    }
+    .nav{
+        display: none;
+    }
+    #list:checked~.nav{
+        display: block;
+    }
+    .items{
+        width: 80px;
+        margin: 5px;
+    }
+    .img{
+        height: 80px;
+    }
+    .status,.pkr{
+        font-size: 5px;
+        padding: 2px 5px;
+        letter-spacing: 1;
+    }
+    .name{
+        font-size: 7px;
+        padding: 2px 5px;
+    }
+}
